@@ -60,3 +60,48 @@ We have done this as this becomes a classification problem and we can use a suit
 Neural Architecture
 ________________
 ![Alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/Neural_architecture.JPG?raw=true "Optional Title")
+
+
+
+
+
+
+The network has 7 convoluted layers and 2 max pooling after every 2 conv layers and bringing the size to 28x28 to 1x1.
+
+ The model layers are: 
+Network(
+  (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+  (conv6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1))
+  (conv7): Conv2d(256, 10, kernel_size=(3, 3), stride=(1, 1))
+  (layer1): Linear(in_features=20, out_features=19, bias=False)
+)
+
+
+Data Formation from two inputs 
+_________________________
+
+    def forward(self, x, y):
+        x = self.pool1(F.relu(self.conv2(F.relu(self.conv1(x)))))
+        x = self.pool2(F.relu(self.conv4(F.relu(self.conv3(x)))))
+        x = F.relu(self.conv6(F.relu(self.conv5(x))))
+        x = self.conv7(x)
+        x = x.view(-1, 10)
+
+        y = torch.cat((x,y),dim=1) #Horizontal Stacking. 1x10 and 1x10 -> 1x20
+
+
+We have concatenated the final probabilities of 10 classes for a MNIST image from final convulated layer 
+ with the Random number represented in 10-bit one hot encoded vector.
+After this we get a tensor of size 20, which we pass through final fully connected layer (self.layer1) 
+with input_features = 20 and output as 19(to get possible probabilities of sums which are 19 ).
+
+ output_features = 19, to get all possible probabilities of sums which are 19 (0 → 18).
+
+
+
