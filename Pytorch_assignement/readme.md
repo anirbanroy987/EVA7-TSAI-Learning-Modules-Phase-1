@@ -149,5 +149,74 @@ The negative log-likelihood becomes unhappy at smaller values, where it can reac
 ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/NLL_image.JPG?raw=true)
 
 
+***TRaining LOG ****
+
+We count the correct MNIST Images Predicted and also the correct sum of MNIST and Random Number predicted is calculated 
+and  is divided by total number of images present.
+
+
+```
+loss=1.2538264989852905 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.86it/s]
+
+Test set: Average loss: 1.3398, Accuracy1: 9845/10000 (98%), Accuracy2: 4900/10000 (49%)
+
+loss=1.172275424003601 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.53it/s]
+
+Test set: Average loss: 1.2803, Accuracy1: 9863/10000 (99%), Accuracy2: 4984/10000 (50%)
+
+loss=0.7922142744064331 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.54it/s]
+
+Test set: Average loss: 0.8664, Accuracy1: 9910/10000 (99%), Accuracy2: 6701/10000 (67%)
+
+loss=0.8499040007591248 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.20it/s]
+
+Test set: Average loss: 0.9152, Accuracy1: 9913/10000 (99%), Accuracy2: 6711/10000 (67%)
+
+loss=0.8697547316551208 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 40.02it/s]
+
+Test set: Average loss: 0.8900, Accuracy1: 9911/10000 (99%), Accuracy2: 6658/10000 (67%)
+
+loss=0.6686374545097351 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.96it/s]
+
+Test set: Average loss: 0.6791, Accuracy1: 9921/10000 (99%), Accuracy2: 7942/10000 (79%)
+
+loss=2.170863389968872 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.96it/s]
+
+Test set: Average loss: 0.5579, Accuracy1: 9932/10000 (99%), Accuracy2: 8872/10000 (89%)
+
+loss=0.6816314458847046 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.55it/s]
+
+Test set: Average loss: 0.6242, Accuracy1: 9921/10000 (99%), Accuracy2: 8661/10000 (87%)
+
+loss=0.38011395931243896 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.83it/s]
+
+Test set: Average loss: 0.7262, Accuracy1: 9918/10000 (99%), Accuracy2: 8104/10000 (81%)
+
+loss=0.37112191319465637 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.85it/s]
+
+Test set: Average loss: 0.6148, Accuracy1: 9929/10000 (99%), Accuracy2: 8290/10000 (83%)
+
+loss=0.2961824834346771 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.64it/s]
+
+Test set: Average loss: 0.5272, Accuracy1: 9929/10000 (99%), Accuracy2: 9027/10000 (90%)
+
+loss=0.46351972222328186 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.50it/s]
+
+Test set: Average loss: 0.6365, Accuracy1: 9921/10000 (99%), Accuracy2: 8598/10000 (86%)
+
+loss=0.44882676005363464 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.60it/s]
+
+Test set: Average loss: 0.7144, Accuracy1: 9930/10000 (99%), Accuracy2: 7983/10000 (80%)
+
+loss=0.29906904697418213 batch_id=937: 100%|██████████| 938/938 [00:23<00:00, 39.97it/s]
+
+Test set: Average loss: 0.6271, Accuracy1: 9923/10000 (99%), Accuracy2: 8475/10000 (85%)
+
+```
+
+***ACCURACY - 99%
+*** ACCURACY RANDOM NUMBER GEN SUM - 85%
+***
+
 
 
