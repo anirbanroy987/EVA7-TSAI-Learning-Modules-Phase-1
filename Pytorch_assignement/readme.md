@@ -75,15 +75,25 @@ The network has 7 convoluted layers and 2 max pooling after every 2 conv layers 
  The model layers are: 
 Network(
   (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  
   (conv2): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  
   (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  
   (conv3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  
   (conv4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  
   (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  
   (conv5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+  
   (conv6): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1))
+  
   (conv7): Conv2d(256, 10, kernel_size=(3, 3), stride=(1, 1))
+  
   (layer1): Linear(in_features=20, out_features=19, bias=False)
+  
 )
 
 
