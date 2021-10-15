@@ -55,3 +55,8 @@ Screenshot of the code: -
 
 
 We have done this as this becomes a classification problem and we can use a suitable classification loss function like cross entrophy or negative lok-likelihood functions.
+
+
+Neural Architecture
+________________
+![Alt text](/EVA7-TSAI-Learning-Modules-Phase-1/images/Neural_architecture.JPG?raw=true "Optional Title")
