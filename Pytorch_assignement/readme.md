@@ -13,10 +13,10 @@ and gives two outputs:
 
 
 
-SOLUTION : -
+**SOLUTION : -**
 
 
-1.Data Representation
+__1.Data Representation__
 
 
 A Custom Dataset CLASS RandomNumGen is created which take Inputs(train or test). The MNIST Data is given as the input .
@@ -38,7 +38,7 @@ train_ds and test dataset will be created using the RandomNumGen class .
 Screenshot of the code: -
 
 
-##class RandomNumGen(Dataset):
+class RandomNumGen(Dataset):
   
     def __init__(self, MNIST_data):
         self.MNIST = MNIST_data
@@ -117,5 +117,19 @@ with input_features = 20 and output as 19(to get possible probabilities of sums 
 
  output_features = 19, to get all possible probabilities of sums which are 19 (0 → 18).
 
+
+**GPU Usage**
+
+def get_default_device():
+    """
+    Pick GPU if available, else CPU.
+    """
+    if torch.cuda.is_available():
+        return torch.device('cuda')
+    else:
+        return torch.device('cpu')
+
+device = get_default_device()
+device
 
 
