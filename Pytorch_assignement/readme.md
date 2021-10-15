@@ -119,8 +119,8 @@ with input_features = 20 and output as 19(to get possible probabilities of sums 
 
 
 **GPU Usage**
-
-<def get_default_device():
+'''
+def get_default_device():
     """
     Pick GPU if available, else CPU.
     """
@@ -130,6 +130,7 @@ with input_features = 20 and output as 19(to get possible probabilities of sums 
         return torch.device('cpu')
 
 device = get_default_device()
-device>
+device
+'''
 
 
