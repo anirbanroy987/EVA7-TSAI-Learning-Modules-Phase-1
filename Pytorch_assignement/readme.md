@@ -61,7 +61,7 @@ class RandomNumGen(Dataset):
 We have done this as this becomes a classification problem and we can use a suitable classification loss function like cross entrophy or negative lok-likelihood functions.
 
 
-Neural Architecture
+***Neural Architecture***
 ________________
 ![Alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/Neural_architecture.JPG?raw=true "Optional Title")
 
@@ -97,7 +97,7 @@ Network(
 )
 
 
-Data Formation from two inputs 
+***Data Formation from two inputs ***
 _________________________
 
     def forward(self, x, y):
@@ -132,6 +132,22 @@ def get_default_device():
 
 device = get_default_device()
 ```
+
+
+***Loss Functions Reasons***
+
+1.This is a multiclass classification problem , we have used NLL with a combination of log_softmax ..
+Why log_softmax as basically, nn.NLLLoss expects log probabilities as input instead of probabilities.
+Equation .
+![Alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/Loss_function.JPG?raw=true Loss Function Equations")
+
+when training a model, we aspire to find the minima of a loss function given a set of parameters (in a neural network, these are the weights and biases). We can interpret the loss as the “unhappiness” of the network with respect to its parameters. The higher the loss, the higher the unhappiness: we don’t want that. We want to make our models happy.
+
+So if we are using the negative log-likelihood as our loss function, when does it become unhappy? And when does it become happy?
+The negative log-likelihood becomes unhappy at smaller values, where it can reach infinite unhappiness (that’s too sad), and becomes less unhappy at larger values. Because we are summing the loss function to all the correct classes, what’s actually happening is that whenever the network assigns high confidence at the correct class, the unhappiness is low, but when the network assigns low confidence at the correct class, the unhappiness is high.
+
+![Alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/NLL_image.JPG?raw=true Loss Function Equations")
+
 
 
 
