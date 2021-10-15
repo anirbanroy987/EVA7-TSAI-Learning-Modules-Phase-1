@@ -146,7 +146,7 @@ when training a model, we aspire to find the minima of a loss function given a s
 So if we are using the negative log-likelihood as our loss function, when does it become unhappy? And when does it become happy?
 The negative log-likelihood becomes unhappy at smaller values, where it can reach infinite unhappiness (that’s too sad), and becomes less unhappy at larger values. Because we are summing the loss function to all the correct classes, what’s actually happening is that whenever the network assigns high confidence at the correct class, the unhappiness is low, but when the network assigns low confidence at the correct class, the unhappiness is high.
 
-![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/Loss_function.JPG?raw=true)
+![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/NLL_image.JPG?raw=true)
 
 
 
