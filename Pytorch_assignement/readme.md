@@ -59,4 +59,4 @@ We have done this as this becomes a classification problem and we can use a suit
 
 Neural Architecture
 ________________
-![Alt text](/EVA7-TSAI-Learning-Modules-Phase-1/images/Neural_architecture.JPG?raw=true "Optional Title")
+![Alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/Neural_architecture.JPG?raw=true "Optional Title")
