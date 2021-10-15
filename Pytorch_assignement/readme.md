@@ -139,7 +139,7 @@ device = get_default_device()
 1.This is a multiclass classification problem , we have used NLL with a combination of log_softmax ..
 Why log_softmax as basically, nn.NLLLoss expects log probabilities as input instead of probabilities.
 Equation .
-![Alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/Loss_function.JPG?raw=true Loss Function Equations")
+![Alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/Loss_function.JPG?raw=true "Loss Function Equations")
 
 when training a model, we aspire to find the minima of a loss function given a set of parameters (in a neural network, these are the weights and biases). We can interpret the loss as the “unhappiness” of the network with respect to its parameters. The higher the loss, the higher the unhappiness: we don’t want that. We want to make our models happy.
 
