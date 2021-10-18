@@ -168,7 +168,7 @@ Same approach was taken for test data .
 
 ### We have used the following approaches  - 
 
-**NO DROPOUT ONLY BATCH NORM AND GAP WITHOUT DATA AUGMENTATION **
+***NO DROPOUT ONLY BATCH NORM AND GAP WITHOUT DATA AUGMENTATION ***
 
 1.Parameters - 9,186
 
@@ -189,14 +189,14 @@ Same approach was taken for test data .
 9.BatchSize - 128
 
 
-**ARCHITECTURE**
+***ARCHITECTURE***
 
 ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/nodroput_onlygap.JPG?raw=true)
 
 
 ACCURACY - 98.90
 
-**USING DATA AUGMENTATION ,NO DROPOUT,BATCH SIZE**
+***USING DATA AUGMENTATION ,NO DROPOUT,BATCH SIZE***
 
 
 ```
@@ -235,7 +235,7 @@ ACCURACY - 99.26%
 
 ### FINAL MODEL 
 
-***With DROPOUT AND STEP WISE LR **
+***With DROPOUT AND STEP WISE LR ***
 
 Best Model using step wise learning rate scheduler and using a single dropout layer
 
@@ -271,7 +271,7 @@ Best Model using step wise learning rate scheduler and using a single dropout la
 
 
 
-MODEL LOGS : -
+***MODEL LOGS : -***
 
 
 Epoch: 1
@@ -386,7 +386,7 @@ Epoch: 19
 loss=0.11143185943365097 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 14.00it/s]
 
 TRAIN set: Average loss: 0.0437, Train Accuracy: 98.67%
-TEST set: Average loss: 0.0197, Test Accuracy: 99.43%
+***TEST set: Average loss: 0.0197, Test Accuracy: 99.43%***
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
