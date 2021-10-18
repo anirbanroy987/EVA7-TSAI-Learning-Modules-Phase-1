@@ -3,8 +3,7 @@
 # PART-1 Train a Simple Neural Network using Microsoft Excel
 
 
-# PART -2 MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy
-
+# PART 2
 
 ***NETWORK***
 
@@ -150,8 +149,8 @@ We can observe that higher the value of learning rate, higher the rate of conver
 
 
 
-### PART2
-MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy
+
+[MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy] #part-2
 
 
 
