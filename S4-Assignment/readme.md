@@ -162,6 +162,7 @@ This assignment aims to design a CNN model for MNIST Classification having 99.4%
 The objective is to optimize a network combining many deep learning techniques on the layers and use very few parameters to achieve high accuracy.
 
 ***DATA PREPARATION***
+
 We have created a dataloader variable and converted into to_tensor and normalized the values with mean and std dev - (0.1307,), (0.3081,).
 Same approach was taken for test data .
 
