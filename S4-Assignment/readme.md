@@ -171,13 +171,21 @@ Same approach was taken for test data .
 **NO DROPOUT ONLY BATCH NORM AND GAP WITHOUT DATA AUGMENTATION **
 
 1.Parameters - 9,186
+
 2.Used GAP 
+
 3.Used FC 
+
 4.No dropout
+
 5.Used Max Pooling 
+
 6.Activation functions 
+
 7.Learning rate - 0.01
+
 8.Epochs - 20
+
 9.BatchSize - 128
 
 
@@ -202,14 +210,23 @@ train_data_with_augmentation = datasets.MNIST('./data', train=True, download=Tru
 ```
 
 1.Parameters - 9,186
+
 2.Used GAP 
+
 3.Used FC 
+
 4.No dropout
+
 5.Used Max Pooling 
+
 6.Activation functions 
+
 7.Learning rate - 0.01
+
 8.Epochs - 20
+
 9.BatchSize - 64
+
 10.Data Augmentation
 
 ACCURACY - 99.26%
@@ -223,15 +240,25 @@ ACCURACY - 99.26%
 Best Model using step wise learning rate scheduler and using a single dropout layer
 
 1.Parameters - 9,320
+
 2.Used GAP 
+
 3.Used FC 
+
 4.Dropout
+
 5.Used Max Pooling 
+
 6.Activation functions 
+
 7.Learning rate - 0.01
+
 8.Epochs - 18
+
 9.BatchSize - 64
+
 10.Data Augmentation
+
 11.Stepwise LR scheduler -(step_size= 8, gamma= 0.25)
 
 ***ARCHITECTURE***
