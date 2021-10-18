@@ -150,7 +150,7 @@ We can observe that higher the value of learning rate, higher the rate of conver
 
 
 
-[MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy] (#part-2)
+[MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy](#part-2)
 
 
 
