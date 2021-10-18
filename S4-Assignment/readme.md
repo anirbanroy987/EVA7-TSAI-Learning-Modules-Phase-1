@@ -4,7 +4,7 @@
 
 
 
-# [MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy](#part2)
+# [PART -2 MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy](#part2)
 
 ***NETWORK***
 
@@ -152,6 +152,215 @@ We can observe that higher the value of learning rate, higher the rate of conver
 
 
 # PART2 
+
+This assignment aims to design a CNN model for MNIST Classification having 99.4% with following constraints.
+
+- Total number of parameters should be less than 20000.
+- The above accuracy should be achieved within 20 epochs.
+
+
+The objective is to optimize a network combining many deep learning techniques on the layers and use very few parameters to achieve high accuracy.
+
+***DATA PREPARATION***
+We have created a dataloader variable and converted into to_tensor and normalized the values with mean and std dev - (0.1307,), (0.3081,).
+Same approach was taken for test data .
+
+
+### We have used the following approaches  - 
+
+**NO DROPOUT ONLY BATCH NORM AND GAP WITHOUT DATA AUGMENTATION **
+
+1.Parameters - 9,186
+2.Used GAP 
+3.Used FC 
+4.No dropout
+5.Used Max Pooling 
+6.Activation functions 
+7.Learning rate - 0.01
+8.Epochs - 20
+9.BatchSize - 128
+
+
+**ARCHITECTURE**
+
+![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/nodroput_onlygap.JPG?raw=true)
+
+
+ACCURACY - 98.90
+
+**USING DATA AUGMENTATION ,NO DROPOUT,BATCH SIZE**
+
+
+```
+train_data_with_augmentation = datasets.MNIST('./data', train=True, download=True,
+                                transform=transforms.Compose([
+                                    transforms.RandomRotation(5),
+                                    transforms.RandomAffine(degrees=8, translate=(0.15,0.15), scale=(0.85, 1.15)),
+                                    transforms.ColorJitter(brightness=0.1, contrast=0.1),
+                                    transforms.ToTensor(),
+                                    transforms.Normalize((0.1307,), (0.3081,))]))
+```
+
+1.Parameters - 9,186
+2.Used GAP 
+3.Used FC 
+4.No dropout
+5.Used Max Pooling 
+6.Activation functions 
+7.Learning rate - 0.01
+8.Epochs - 20
+9.BatchSize - 64
+10.Data Augmentation
+
+ACCURACY - 99.26%
+
+
+
+### FINAL MODEL 
+
+***With DROPOUT AND STEP WISE LR **
+
+Best Model using step wise learning rate scheduler and using a single dropout layer
+
+1.Parameters - 9,320
+2.Used GAP 
+3.Used FC 
+4.Dropout
+5.Used Max Pooling 
+6.Activation functions 
+7.Learning rate - 0.01
+8.Epochs - 18
+9.BatchSize - 64
+10.Data Augmentation
+11.Stepwise LR scheduler -(step_size= 8, gamma= 0.25)
+
+***ARCHITECTURE***
+
+![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/withdropout_nn.JPG?raw=true)
+
+
+
+
+
+
+
+MODEL LOGS : -
+
+
+Epoch: 1
+loss=0.06085310876369476 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.90it/s]
+
+TRAIN set: Average loss: 0.5584, Train Accuracy: 82.21%
+TEST set: Average loss: 0.0766, Test Accuracy: 97.74%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 2
+loss=0.06745391339063644 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.82it/s]
+
+TRAIN set: Average loss: 0.1358, Train Accuracy: 96.14%
+TEST set: Average loss: 0.0542, Test Accuracy: 98.32%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 3
+loss=0.058390356600284576 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.94it/s]
+
+TRAIN set: Average loss: 0.1063, Train Accuracy: 96.83%
+TEST set: Average loss: 0.0627, Test Accuracy: 98.04%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 4
+loss=0.020141618326306343 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.93it/s]
+
+TRAIN set: Average loss: 0.0888, Train Accuracy: 97.39%
+TEST set: Average loss: 0.0468, Test Accuracy: 98.50%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 5
+loss=0.08200311660766602 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.91it/s]
+
+TRAIN set: Average loss: 0.0816, Train Accuracy: 97.63%
+TEST set: Average loss: 0.0348, Test Accuracy: 98.97%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 6
+loss=0.09740690141916275 batch_id=937: 100%|██████████| 938/938 [01:06<00:00, 14.06it/s]
+
+TRAIN set: Average loss: 0.0735, Train Accuracy: 97.83%
+TEST set: Average loss: 0.0369, Test Accuracy: 98.89%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 7
+loss=0.19831380248069763 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.98it/s]
+
+TRAIN set: Average loss: 0.0708, Train Accuracy: 97.87%
+TEST set: Average loss: 0.0292, Test Accuracy: 99.01%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 8
+loss=0.010681346990168095 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.91it/s]
+
+TRAIN set: Average loss: 0.0651, Train Accuracy: 98.03%
+TEST set: Average loss: 0.0328, Test Accuracy: 98.99%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 9
+loss=0.06247676908969879 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.99it/s]
+
+TRAIN set: Average loss: 0.0523, Train Accuracy: 98.42%
+TEST set: Average loss: 0.0222, Test Accuracy: 99.36%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 10
+loss=0.0034355116076767445 batch_id=937: 100%|██████████| 938/938 [01:06<00:00, 14.01it/s]
+
+TRAIN set: Average loss: 0.0503, Train Accuracy: 98.56%
+TEST set: Average loss: 0.0209, Test Accuracy: 99.33%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 11
+loss=0.00834533479064703 batch_id=937: 100%|██████████| 938/938 [01:06<00:00, 14.04it/s]
+
+TRAIN set: Average loss: 0.0483, Train Accuracy: 98.55%
+TEST set: Average loss: 0.0205, Test Accuracy: 99.38%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 12
+loss=0.05023888498544693 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.79it/s]
+
+TRAIN set: Average loss: 0.0492, Train Accuracy: 98.53%
+TEST set: Average loss: 0.0204, Test Accuracy: 99.35%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 13
+loss=0.01739363744854927 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.87it/s]
+
+TRAIN set: Average loss: 0.0474, Train Accuracy: 98.56%
+TEST set: Average loss: 0.0199, Test Accuracy: 99.35%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 14
+loss=0.011957034468650818 batch_id=937: 100%|██████████| 938/938 [01:06<00:00, 14.02it/s]
+
+TRAIN set: Average loss: 0.0453, Train Accuracy: 98.62%
+TEST set: Average loss: 0.0227, Test Accuracy: 99.32%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 15
+loss=0.10129786282777786 batch_id=937: 100%|██████████| 938/938 [01:06<00:00, 14.06it/s]
+
+TRAIN set: Average loss: 0.0474, Train Accuracy: 98.54%
+TEST set: Average loss: 0.0210, Test Accuracy: 99.31%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 16
+loss=0.08632291853427887 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.92it/s]
+
+TRAIN set: Average loss: 0.0461, Train Accuracy: 98.58%
+TEST set: Average loss: 0.0218, Test Accuracy: 99.28%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 17
+loss=0.006729969754815102 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.86it/s]
+
+TRAIN set: Average loss: 0.0420, Train Accuracy: 98.72%
+TEST set: Average loss: 0.0206, Test Accuracy: 99.37%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 18
+loss=0.04360434412956238 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 13.92it/s]
+
+TRAIN set: Average loss: 0.0414, Train Accuracy: 98.77%
+TEST set: Average loss: 0.0201, Test Accuracy: 99.38%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Epoch: 19
+loss=0.11143185943365097 batch_id=937: 100%|██████████| 938/938 [01:07<00:00, 14.00it/s]
+
+TRAIN set: Average loss: 0.0437, Train Accuracy: 98.67%
+TEST set: Average loss: 0.0197, Test Accuracy: 99.43%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
