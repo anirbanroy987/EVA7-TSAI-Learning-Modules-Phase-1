@@ -3,6 +3,9 @@
 ***PART-1***
 ***Train a Simple Neural Network using Microsoft Excel****
 
+
+*** #PART-2  -- MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy****
+
 -- NETWORK -- 
 
 ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/NN.JPG?raw=true)
@@ -148,7 +151,7 @@ We can observe that higher the value of learning rate, higher the rate of conver
 
 
 
-
+[MNIST Classification with less than 20,000 parameters and 99.4% validation accuracy] #PART-2
 
 
 
