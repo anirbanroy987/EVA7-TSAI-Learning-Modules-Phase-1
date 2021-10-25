@@ -1,4 +1,4 @@
-***Your new target is:***
+***new target is:***
 
 1.99.4% (this must be consistently shown in your last few epochs, and not a one-time achievement)
 
@@ -23,7 +23,7 @@ LR Scheduler: None
 
 No. of Epochs: less than 20
 
-***Model Results : - ***
+***Model Results***
 
 Total Parameters used: 9,902
 
@@ -33,7 +33,7 @@ Best Test Accuracy: 99.12%
 
 Consistency: Did not achieve any consistency with test accuracy greater than 99.4. How ever tried to run till 20 epochs to understand if our model performs well but it deosnt go beyond 99.1 %.
 
-***Analysis:***
+***Analysis***
 
 With the base network architecture, we achieved a test accuracy of 99% which is not even close to the target test accuracy to achieve. We plan to improve the test accuracy by doing the following approaches:
 
@@ -59,7 +59,7 @@ LR Scheduler: No
 
 No. of Epochs: 14
 
-***Model Results : -***
+***Model Results***
 
 Total Parameters used: 9,060
 
@@ -91,7 +91,7 @@ No. of Epochs: 20
 
 
 
-***Achievements***
+***Model Results***
 
 Total Parameters used: 9,060
 
@@ -134,7 +134,7 @@ LR Scheduler: StepLR
 No. of Epochs: 20
 
 
-***Acheivements***
+***Model Results***
 
 Total Parameters Used: 7,946
 
