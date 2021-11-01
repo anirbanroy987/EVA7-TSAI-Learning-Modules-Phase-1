@@ -27,13 +27,17 @@ The file Assignment_6_normalization.ipynb contains all the three models based on
  ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/accuracy_metrics.JPG?raw=true)
  
  # Misclassified Predictions for all the three Techniques.
- Batch Norm 
+ ***Batch Norm***
+ 
+ 
   ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/batch_norm%2Bl1.JPG?raw=true)
   
-  Group Norm 
+  
+  ***Group Norm*** 
   
    ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/group_norm.JPG?raw=true)
    
-   Layer Norm
+   
+   ***Layer Norm***
    
     ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/layer_norm_predictions.JPG?raw=true)
