@@ -14,7 +14,9 @@ The file Assignment_6_normalization.ipynb contains all the three models based on
 # 3.your findings for normalization techniques.
 
   a.We found that GroupNorm was better than batch norm when we have smaller batch size.
+  
   b.The accuracy in Group Norm was better .
+  
   c.Layernorm performance was lower compared to other two techniques,we think that with regularization the model might improve.
   
  # 4.Loss and accuracy graphs of three techniques used.
