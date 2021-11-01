@@ -42,4 +42,5 @@ The file Assignment_6_normalization.ipynb contains all the three models based on
    
    ***Layer Norm***
    
-    ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/layer_norm_predictions.JPG?raw=true)
+   ![alt text](https://github.com/anirbanroy987/EVA7-TSAI-Learning-Modules-Phase-1/blob/main/images/layer_norm_predictions.JPG?raw=true)
+    
